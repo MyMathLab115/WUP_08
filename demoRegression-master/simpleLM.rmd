@@ -49,3 +49,42 @@ summary.lm(simp)
 
 The adjusted R square for headwth is 0.5321.
 
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted R square for age is 0.5073.
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted R square for weight is 0.7423
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted R square for chest is 0.7869
+
+### Conclusion
+
+Based on the measurment data, considering the smallest to the largest adjusted R square as follows:
+
+Age           0.5073
+Headwidth     0.5321
+Weight        0.7423
+Neck          0.7476
+Chest         0.7869
+Headlength    0.8434
+
+The headlength ajusted R square is the best.
